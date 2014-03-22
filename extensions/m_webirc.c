@@ -116,7 +116,7 @@ mr_webirc(struct Client *client_p, struct Client *source_p, int parc, const char
 	}
 
 
-	rb_strlcpy(source_p->sockhost, parv[4], sizeof(source_p->sockhost));
+	rb_strlcpy(source_p->sockhost, parv[3], sizeof(source_p->sockhost));
 
 	if(strlen(parv[3]) <= HOSTLEN)
 		rb_strlcpy(source_p->host, parv[3], sizeof(source_p->host));
@@ -136,6 +136,6 @@ mr_webirc(struct Client *client_p, struct Client *source_p, int parc, const char
 		}
 	}
 
-	sendto_one(source_p, "NOTICE * :CGI:IRC host/IP set to %s %s", parv[3], parv[4]);
+	sendto_one(source_p, "NOTICE * :Congratulations, your host is reset via I:line: %s %s", parv[3], parv[4]);
 	return 0;
 }
