@@ -86,7 +86,7 @@ struct cmode_ elemental_status_mode_list[] = {
 
 struct cmode_ elemental_prefix_mode_list[] = {
   { '~', CSTATUS_OWNER },
-  { '!', CSTATUS_PROTECT },
+  { '&', CSTATUS_PROTECT },
   { '@', CSTATUS_OP    },
   { '%', CSTATUS_HALFOP },
   { '+', CSTATUS_VOICE },

@@ -401,7 +401,7 @@ send_capabilities(struct Client *client_p, int cap_can_send)
 	t--;
 	*t = '\0';
 
-	sendto_one(client_p, "CAPAB :%s", msgbuf);
+	sendto_one(client_p, "CAPAB :HOPS %s", msgbuf);
 }
 
 static void
